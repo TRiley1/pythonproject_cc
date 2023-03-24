@@ -10,4 +10,4 @@ class TestAdventurer(unittest.TestCase):
         self.loot1 = Loot("boots", "Worn boots")
         self.item = Item("Sword", "The Sword of Gods", "Super Rare", 100000)
         self.item = Item("Sword", "The Sword of Gods", "Super Rare", 100000)
-        self.adventurer = Adventurer("Steve the Great", [self.loot, self.loot1],)
+        self.adventurer = Adventurer("Steve the Great", [self.loot, self.loot1],[self.item, self.item])
