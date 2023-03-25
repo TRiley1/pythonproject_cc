@@ -5,3 +5,8 @@ import repositories.item_repo as item_repo
 
 item = Item("Misc", "Rusty Spoon")
 item_repo.save(item)
+
+results = item_repo.select_all()
+
+for item in results:
+    print(f"I have this {item.name} and it looks like a {item.type}")

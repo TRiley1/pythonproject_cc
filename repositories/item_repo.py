@@ -8,3 +8,14 @@ def save(item):
 
     id = results[0]['id']
     item.id = id
+
+def select_all():
+    items = []
+    sql = 'SELECT * FROM items'
+    results = run_sql(sql)
+
+    for row in results:
+        new_item = Item(row['type'], row['name'], row['rarity'], row['value'])
+        items.append(new_item)
+
+    return items
