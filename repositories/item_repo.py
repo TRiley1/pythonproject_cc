@@ -31,3 +31,12 @@ def select(id):
 
     return item
 
+def delete_all():
+    sql = "DELETE * FROM items"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM items WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+

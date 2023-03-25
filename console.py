@@ -12,5 +12,7 @@ for item in results:
     print(f"I have this {item.name} and it looks like a {item.type}")
 
 
-id3 =item_repo.select(3)
+id3 =item_repo.select(2)
 print(f"This is id3 : {id3}")
+
+item_repo.delete(2)
