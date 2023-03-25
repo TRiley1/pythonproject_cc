@@ -1,5 +1,5 @@
 class Adventurer:
-    def __init__(self, name, loot, inventory):
+    def __init__(self, name, loot, id = None):
         self.name = name 
         self.loot = loot 
-        self.inventory = inventory 
+        self.id = id

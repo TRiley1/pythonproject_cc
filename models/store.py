@@ -1,5 +1,6 @@
 class Store: 
-    def __init__(self, name, stock, appraisel):
+    def __init__(self, name, money id = None):
         self.name = name 
-        self.stock = stock 
-        self.appraisel = appraisel
+        self.money = money 
+        self.stock = {} 
+        self.appraisel = {}
