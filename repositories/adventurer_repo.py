@@ -43,3 +43,10 @@ def select(id):
         item = Item(result['name'])
 
     return item
+
+def adventurer_update(adventurer):
+    sql = "UPDATE adventurers \
+        SET name = %s \
+        WHERE id = %s"
+    values = [adventurer.name, adventurer.id]
+    run_sql(sql,values)

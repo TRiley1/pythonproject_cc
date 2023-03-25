@@ -1,16 +1,26 @@
 from models.item import Item
+from models.adventurer import Adventurer
 import repositories.item_repo as item_repo
+import repositories.adventurer_repo as adventurer_repo
 
 # try and add an item to the database
 
-item1 = Item("Misc", "Rusty Spoon")  
+item1 = Item("Misc", "Rusty Spoon")
+ 
 # item1 = Item('boo', 'The Ladel of Gods', 'Ultra Rare', 1000)
 # item_repo.item_update(item1)
+
 item_repo.save(item1)
+
 
 item1.name = 'The Ladel of the Gods'
 item1.rarity = 'Ultra Rare'
 item1.value = 1000
+
+adventurer1 = Adventurer("Indiana") 
+adventurer_repo.save(adventurer1)
+adventurer1.name = 'Dora the Explorer'
+adventurer_repo.adventurer_update(adventurer1)
 
 item_repo.item_update(item1)
 
