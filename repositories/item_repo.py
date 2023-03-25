@@ -40,3 +40,12 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+def item_update(item):
+    sql = "UPDATE items \
+        SET (type, name, rarity, value) = (%s,%s,%s,%s) \
+        WHERE id = %s"
+    values = [item.type, item.name, item.rarity, item.value, item.id]
+    run_sql(sql,values)
+
+    
+
