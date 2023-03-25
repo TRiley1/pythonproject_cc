@@ -32,3 +32,4 @@ INSERT INTO item_adv(adventurer_id, loot_id) VALUES (2,1);
 INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,2);
 
 -- SELECT adventurers.* FROM adventurers INNER JOIN item_adv ON item_adv.adventurer_id = adventurers.id WHERE item_adv.loot_id = 1
+-- This query tells me the number of adventurers that own ID 1 in this case a rusty helmet.
