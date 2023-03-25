@@ -1,7 +1,6 @@
 class Adventurer:
-    def __init__(self, name,loot, id = None):
+    def __init__(self, name, id = None):
         self.name = name 
-        self.loot = loot 
         self.id = id
         self.inventory = []
 
