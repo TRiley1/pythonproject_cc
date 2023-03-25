@@ -47,5 +47,22 @@ def item_update(item):
     values = [item.type, item.name, item.rarity, item.value, item.id]
     run_sql(sql,values)
 
+# gives a random number of loot objects
+
+def find_loot(num):
+    backpack = []
+    sql = "SELECT * FROM items \
+        WHERE value IS NULL \
+        ORDER BY RANDOM() LIMIT(%s)"
+    values = [num]
+    results = run_sql(sql, values)
+
+    for loot in results:
+        new_loot = Item(loot['type'], loot['name'], loot['rarity'])
+        backpack.append(new_loot)
+
+    return backpack
+
+
     
 

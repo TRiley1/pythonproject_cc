@@ -25,3 +25,8 @@ for item in results:
 
 # item_repo.delete(2)
 
+backpack1  = item_repo.find_loot(3)
+
+for item in backpack1:
+    print (f"{item.name}, {item.type}")
+

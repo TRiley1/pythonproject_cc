@@ -24,6 +24,12 @@ CREATE TABLE item_adv (
 
 INSERT INTO items (type, name, rarity, value) VALUES ('helmet', 'rusty helmet', NULL, NULL);
 INSERT INTO items (type, name, rarity, value) VALUES ('sword', 'dirty dagger', NULL, NULL);
+INSERT INTO items (type, name, rarity, value) VALUES ('tunic', 'worn tunic', NULL, NULL);
+INSERT INTO items (type, name, rarity, value) VALUES ('lamp', 'dusty lamp', NULL, NULL);
+INSERT INTO items (type, name, rarity, value) VALUES ('helmet', 'cracked helmet', NULL, NULL);
+INSERT INTO items (type, name, rarity, value) VALUES ('belt', 'tired belt', NULL, NULL);
+INSERT INTO items (type, name, rarity, value) VALUES ('axe', 'brittle axe', NULL, NULL);
+INSERT INTO items (type, name, rarity, value) VALUES ('shorts', 'sad shorts', NULL, NULL);
 INSERT INTO adventurers (name) VALUES ('Thorfin');
 INSERT INTO adventurers (name) VALUES ('Thorkell');
 INSERT INTO adventurers (name) VALUES ('Thor');
