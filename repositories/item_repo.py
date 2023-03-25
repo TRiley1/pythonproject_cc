@@ -19,3 +19,15 @@ def select_all():
         items.append(new_item)
 
     return items
+
+def select(id):
+    sql = 'SELECT * FROM items WHERE id = %s'
+    values = [id]
+    results = run_sql(sql, values)
+
+    if results:
+        result = results[0]
+        item = Item(result['type'], result['name'], result['rarity'], result['value'])
+
+    return item
+

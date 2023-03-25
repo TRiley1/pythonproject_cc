@@ -10,3 +10,7 @@ results = item_repo.select_all()
 
 for item in results:
     print(f"I have this {item.name} and it looks like a {item.type}")
+
+
+id3 =item_repo.select(3)
+print(f"This is id3 : {id3}")
