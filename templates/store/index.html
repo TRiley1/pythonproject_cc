@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -17,8 +18,10 @@
             <img src = "/static/images/{{ item.image }}"/>
             <div class = item_bottom>
                 {% if item.value %}
-                    <h2>Rarity: {{item.rarity}}</h2>
                     <h2>Price: {{item.value}}</h2>
+                    <form class = "buy_form" action = "/items/{{ item.id }}/delete" method = 'POST' >
+                        <button>BUY</button>
+                    </form>
                 {% else %}
                     <h2>Rarity: Unknown</h2>
                     <h2>Price: Unknown</h2>

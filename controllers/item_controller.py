@@ -9,3 +9,8 @@ item_blueprint = Blueprint("item", __name__)
 def items():
     items = item_repo.select_all_stock()
     return render_template("store/index.html", items = items)
+
+@item_blueprint.route("/items/<id>/delete", methods = ['POST'])
+def sell(id):
+    item_repo.delete(id)
+    return redirect("/items")

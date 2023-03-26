@@ -15,7 +15,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'])
+        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'], row['id'])
         items.append(new_item)
 
     return items
@@ -26,7 +26,7 @@ def select_all_stock():
     results = run_sql(sql)
 
     for row in results:
-        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'])
+        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'],row['id'])
         items.append(new_item)
 
     return items
