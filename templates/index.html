@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+       
+     {% for item in items %}
         <div class = "item_container">
-        {% for item in items %}
         <div class = "item_card">
         <h1>{{ item.name }}</h1>
         <h2>type: {{ item.type }}</h2>
+        <img src = "/static/images/{{ item.image }}"/>
         {% if item.value %}
             <h2>Rarity: {{item.rarity}}</h2>
             <h2>Value: {{item.value}}</h2>

@@ -6,3 +6,50 @@
     border-radius: 5px;
     width: 200px;
 }
+
+.item_container {
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: double;
+}
+
+ul li {
+    list-style: none;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+nav {
+    background-color: bisque;
+    display:flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    justify-self: flex-end;
+}
+
+body{
+    background-color: rgb(66, 64, 64);
+}
+
+img{
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    margin-left: 10px;
+}

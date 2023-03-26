@@ -2,8 +2,8 @@ from db.run_sql import run_sql
 from models.item import Item
 
 def save(item): 
-    sql = 'INSERT INTO items (type, name, rarity, value) VALUES (%s,%s,%s,%s) RETURNING *'
-    values = [item.type, item.name, item.rarity, item.value]
+    sql = 'INSERT INTO items (type, name, rarity, value) VALUES (%s,%s,%s,%s,%s) RETURNING *'
+    values = [item.type, item.name, item.rarity, item.value, item.image]
     results = run_sql(sql, values)
 
     id = results[0]['id']
@@ -15,7 +15,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        new_item = Item(row['type'], row['name'], row['rarity'], row['value'])
+        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'])
         items.append(new_item)
 
     return items
@@ -27,7 +27,7 @@ def select(id):
 
     if results:
         result = results[0]
-        item = Item(result['type'], result['name'], result['rarity'], result['value'])
+        item = Item(result['type'], result['name'], result['rarity'], result['value'], result['image'])
 
     return item
 
@@ -42,9 +42,9 @@ def delete(id):
 
 def item_update(item):
     sql = "UPDATE items \
-        SET (type, name, rarity, value) = (%s,%s,%s,%s) \
+        SET (type, name, rarity, value) = (%s,%s,%s,%s,%s) \
         WHERE id = %s"
-    values = [item.type, item.name, item.rarity, item.value, item.id]
+    values = [item.type, item.name, item.rarity, item.value, item.image, item.id]
     run_sql(sql,values)
 
 # gives a random number of loot objects
@@ -58,7 +58,7 @@ def find_loot(num):
     results = run_sql(sql, values)
 
     for loot in results:
-        new_loot = Item(loot['type'], loot['name'], loot['rarity'])
+        new_loot = Item(loot['type'], loot['name'], loot['rarity'], loot['image'])
         backpack.append(new_loot)
 
     return backpack
