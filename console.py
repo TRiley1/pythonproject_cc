@@ -68,11 +68,11 @@ inv_repo.save(inventory1)
 # 2. delete adventurer holding rusty spoon. 
 # 3 assign adventurer new item. 
 
-item2 = Item("Misc", "The Ladel of the Gods", "Super Rare", 100)
+item2 = item_repo.select(2)
 item_repo.save(item2)
 
 inventory2 = Inventory(adventurer1, item2)
 inv_repo.save(inventory2)
 
-inv_repo.delete(inventory1)
+
 
