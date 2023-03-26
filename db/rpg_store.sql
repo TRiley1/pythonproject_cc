@@ -30,7 +30,28 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('lamp', 'dusty lamp'
 INSERT INTO items (type, name, rarity,image, value) VALUES ('helmet', 'cracked helmet', NULL, 'axe.png', NULL);
 INSERT INTO items (type, name, rarity,image, value) VALUES ('belt', 'tired belt', NULL, 'axe.png', NULL);
 INSERT INTO items (type, name, rarity,image, value) VALUES ('axe', 'brittle axe', NULL, 'axe.png', NULL);
-INSERT INTO items (type, name, rarity,image, value) VALUES ('shorts', 'sad shorts', NULL, 'axe.png', NULL);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Sword', 'Sword of the Greats ','rare', 'axe.png', 1000);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Axe', 'Oh Dear Axe', 'common', 'axe.png', 500);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Greaves', 'Jimmy Greavous', 'ultra', 'axe.png', 5000);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Helmet', 'Helm of Oblivion', 'ultra', 'axe.png', 10000);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Bow', 'BOW','common', 'axe.png', 500);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Crossbow', 'Vampire Slayer', 'rare', 'axe.png', 2500);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Tunic', 'NIce Tunic', 'common', 'axe.png', 800);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Battle Axe', 'Thorkill', 'ultra', 'axe.png', 8000);
+
+
+-- INSERT INTO items (type, name, rarity, value)
+-- VALUES (
+--     'Helmet', 'The Helmet of Bravery', 
+--     CASE floor(random() * 3) 
+--         WHEN 0 THEN 'Common'
+--         WHEN 1 THEN 'Rare'
+--         ELSE 'Ultra'
+--     END,
+--     floor(random() * 10000) + 100
+-- );
+
+
 INSERT INTO adventurers (name) VALUES ('Thorfin');
 INSERT INTO adventurers (name) VALUES ('Thorkell');
 INSERT INTO adventurers (name) VALUES ('Thor');

@@ -1,10 +1,68 @@
+.common {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: rgb(241, 150, 111);
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    color: rgba(234, 219, 237, 0.664);
+}
+
+.rare {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: rgb(241, 150, 111);
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    color:  rgb(245, 14, 14);
+}
+
+.ultra {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color:rgb(241, 150, 111);
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    color: rgb(184, 26, 237);
+}
+
+
+
+.item_bottom {
+    background-color: rgb(241, 150, 111);
+    margin-top:20px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.item_bottom > h2 {
+    margin-left: 15px;
+}
 
 .item_card{
     background-color: blanchedalmond;
     padding: 20px;
     margin: 20px;
     border-radius: 5px;
-    width: 200px;
+    width: 280px;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item_card > img {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(241, 150, 111);
+    border-radius: 10px;
 }
 
 .item_container {

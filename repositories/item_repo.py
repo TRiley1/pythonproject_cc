@@ -20,6 +20,17 @@ def select_all():
 
     return items
 
+def select_all_stock():
+    items = []
+    sql = 'SELECT * from items WHERE value IS NOT NULL'
+    results = run_sql(sql)
+
+    for row in results:
+        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'])
+        items.append(new_item)
+
+    return items
+
 def select(id):
     sql = 'SELECT * FROM items WHERE id = %s'
     values = [id]

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+       
+     {% for item in items %}
+        <div class = "item_container">
+            <div class = "item_card">
+            {% if item.rarity == "ultra" %}
+                <h1 class = "ultra">{{ item.name }}</h1>
+            {% endif %} 
+            {% if item.rarity == "rare" %}
+                <h1 class = "rare">{{ item.name }}</h1>
+            {% endif %}
+            {% if item.rarity == 'common' %}
+                <h1 class = "common">{{ item.name }}</h1>
+            {% endif %}
+            <img src = "/static/images/{{ item.image }}"/>
+            <div class = item_bottom>
+                {% if item.value %}
+                    <h2>Rarity: {{item.rarity}}</h2>
+                    <h2>Price: {{item.value}}</h2>
+                {% else %}
+                    <h2>Rarity: Unknown</h2>
+                    <h2>Price: Unknown</h2>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% endblock content %}
