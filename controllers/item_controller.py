@@ -12,13 +12,13 @@ item_blueprint = Blueprint("item", __name__)
 def items(id):
     items = item_repo.select_store_stock(1)
     advs = adventurer_repo.select(id)
-    return render_template("/store/index.html", items = items, adventurers = advs)
+    return render_template("/store/index.html", items = items, adventurers = advs, id = id)
 
 @item_blueprint.route("/store/<id>/update", methods = ['POST'])
 def sell(id):
     adventurer = adventurer_repo.select(request.form['adventurer_id'] )
     selling_item = item_repo.select(id)
     inventory = Inventory(adventurer, selling_item)
-    invo_repo.update(inventory)
+    invo_repo.save(inventory)
     
-    return redirect("/items")
+    return redirect("/store/" + adventurer.id)
