@@ -24,7 +24,7 @@ def delete(id):
 
 def select_all():
     adventurers = []
-    sql = 'SELECT * FROM adventurers WHERE id != 1'
+    sql = 'SELECT * FROM adventurers'
     results = run_sql(sql)
 
     for row in results:

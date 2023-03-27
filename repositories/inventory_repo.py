@@ -24,3 +24,14 @@ def delete(inventory):
     sql = "DELETE FROM inventory WHERE id = %s"
     values = [inventory.id]
     run_sql(sql, values)
+
+def select_adventurer_inventory(user_id):
+    items = []
+    sql = 'SELECT items.* FROM items INNER JOIN inventory ON inventory.item_id = items.id WHERE inventory.adventurer_id = %s'
+    values = [user_id]
+    results = run_sql(sql,values)
+
+    for row in results:
+        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'],row['id'])
+        items.append(new_item)
+    return items

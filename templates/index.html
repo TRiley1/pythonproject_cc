@@ -2,7 +2,13 @@
 
 {% block content %}
 {% for adventurer in adventurers %}
-<h1><a href = "/items/{{ adventurer.id }}">{{adventurer.name}}</a></h1>
+<h1>{{adventurer.name}}</h1>
+<form action="/items/{{ adventurer.id }}">
+    <input type="submit" value="Store" />
+</form>
+<form action="/inventory/{{ adventurer.id }}">
+    <input type="submit" value="Inventory" />
+</form>
     
 {% endfor %}
 {% endblock content %}

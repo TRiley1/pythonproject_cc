@@ -11,7 +11,7 @@ def save(item):
 
 def select_all():
     items = []
-    sql = 'SELECT * FROM items'
+    sql = 'SELECT * FROM items WHERE value IS NOT NULL'
     results = run_sql(sql)
 
     for row in results:
