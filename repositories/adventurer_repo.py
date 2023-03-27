@@ -34,15 +34,16 @@ def select_all():
     return adventurers
 
 def select(id):
+    adventurer = None
     sql = 'SELECT * FROM adventurers WHERE id = %s'
     values = [id]
     results = run_sql(sql, values)
 
     if results:
         result = results[0]
-        item = Adventurer(result['name'])
+        adventurer = Adventurer(result['name'],result['id'])
 
-    return item
+    return adventurer
 
 def adventurer_update(adventurer):
     sql = "UPDATE adventurers \

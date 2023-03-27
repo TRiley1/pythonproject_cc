@@ -2,7 +2,7 @@ class Adventurer:
     def __init__(self, name, id = None):
         self.name = name 
         self.id = id
-        self.inventory = []
+        # self.inventory = []
         
     # item being an object
     def find_loot(self,item):

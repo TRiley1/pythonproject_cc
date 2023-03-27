@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS item_adv;
+DROP TABLE IF EXISTS inventory;
 DROP TABLE IF EXISTS adventurers;
 DROP TABLE IF EXISTS items;
 
@@ -16,10 +16,10 @@ CREATE TABLE adventurers (
     name VARCHAR(255)
 );
 
-CREATE TABLE item_adv (
+CREATE TABLE inventory (
     id SERIAL PRIMARY KEY,
     adventurer_id INT NOT NULL REFERENCES adventurers(id) ON DELETE CASCADE,
-    loot_id INT NOT NULL REFERENCES items(id) ON DELETE CASCADE,
+    item_id INT NOT NULL REFERENCES items(id) ON DELETE CASCADE,
     review TEXT
 );
 
@@ -38,16 +38,6 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('Battle Axe', 'Thork
 INSERT INTO items (type, name, rarity,image, value) VALUES ('Scyche', 'Death''s Gambit', 'ultra', 'scythe.png', 8000);
 
 
--- INSERT INTO items (type, name, rarity, value)
--- VALUES (
---     'Helmet', 'The Helmet of Bravery', 
---     CASE floor(random() * 3) 
---         WHEN 0 THEN 'Common'
---         WHEN 1 THEN 'Rare'
---         ELSE 'Ultra'
---     END,
---     floor(random() * 10000) + 100
--- );
 
 
 INSERT INTO adventurers (name) VALUES ('Store');
@@ -55,12 +45,9 @@ INSERT INTO adventurers (name) VALUES ('Thornforg');
 INSERT INTO adventurers (name) VALUES ('Odinthin');
 INSERT INTO adventurers (name) VALUES ('Alexandra');
 
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,8);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,9);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,10);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,11);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,12);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,13);
-
--- SELECT adventurers.* FROM adventurers INNER JOIN item_adv ON item_adv.adventurer_id = adventurers.id WHERE item_adv.loot_id = 1
--- This query tells me the number of adventurers that own ID 1 in this case a rusty helmet.
+INSERT INTO inventory(adventurer_id, item_id) VALUES (1,8);
+INSERT INTO inventory(adventurer_id, item_id) VALUES (1,9);
+INSERT INTO inventory(adventurer_id, item_id) VALUES (1,10);
+INSERT INTO inventory(adventurer_id, item_id) VALUES (1,11);
+INSERT INTO inventory(adventurer_id, item_id) VALUES (1,12);
+INSERT INTO inventory(adventurer_id, item_id) VALUES (1,13);

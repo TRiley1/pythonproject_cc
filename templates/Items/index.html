@@ -19,7 +19,7 @@
             <div class = item_bottom>
                 {% if item.value %}
                     <h2>Price: {{item.value}}</h2>
-                    <form class = "buy_form" action = "/store/{{ item.id }}/update" method = 'POST' >
+                    <form class = "buy_form" action = "/items/{{ item.id }}/update" method = 'POST' >
                         <input type="hidden" name="adventurer_id" value = {{ id }} />
                         <button>BUY</button>
                     </form>
