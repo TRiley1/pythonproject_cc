@@ -35,6 +35,7 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('Axe', 'Oh Dear Axe'
 INSERT INTO items (type, name, rarity,image, value) VALUES ('Staff', 'Fly you Fools', 'ultra', 'staff.png', 5000);
 INSERT INTO items (type, name, rarity,image, value) VALUES ('Helmet', 'Helm of Oblivion', 'ultra', 'helmet.png', 10000);
 INSERT INTO items (type, name, rarity,image, value) VALUES ('Battle Axe', 'Thorkill', 'ultra', 'glassaxe.png', 8000);
+INSERT INTO items (type, name, rarity,image, value) VALUES ('Scyche', 'Death''s Gambit', 'ultra', 'scythe.png', 8000);
 
 
 -- INSERT INTO items (type, name, rarity, value)
@@ -49,12 +50,14 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('Battle Axe', 'Thork
 -- );
 
 
-INSERT INTO adventurers (name) VALUES ('Thorfin');
-INSERT INTO adventurers (name) VALUES ('Thorkell');
-INSERT INTO adventurers (name) VALUES ('Thor');
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,1);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (2,1);
-INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,2);
+INSERT INTO adventurers (name) VALUES ('Store');
+
+INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,8);
+INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,9);
+INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,10);
+INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,11);
+INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,12);
+INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,13);
 
 -- SELECT adventurers.* FROM adventurers INNER JOIN item_adv ON item_adv.adventurer_id = adventurers.id WHERE item_adv.loot_id = 1
 -- This query tells me the number of adventurers that own ID 1 in this case a rusty helmet.

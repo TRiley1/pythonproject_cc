@@ -6,4 +6,4 @@ class Adventurer:
         
     # item being an object
     def find_loot(self,item):
-        self.inventory.append(item)
+        self.inventory.extend(item)

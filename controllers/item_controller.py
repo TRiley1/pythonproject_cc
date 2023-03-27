@@ -10,7 +10,7 @@ item_blueprint = Blueprint("item", __name__)
 
 @item_blueprint.route("/items")
 def items():
-    items = item_repo.select_all_stock()
+    items = item_repo.select_store_stock(1)
     return render_template("store/index.html", items = items)
 
 @item_blueprint.route("/items/<id>/delete", methods = ['POST'])

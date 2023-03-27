@@ -75,4 +75,5 @@ inventory2 = Inventory(adventurer1, item2)
 inv_repo.save(inventory2)
 
 
-
+# SELECT items.* FROM items INNER JOIN item_adv ON item_adv.loot_id = items.id WHERE item_adv.adventurer_id = 1
+# change this for the store. 
