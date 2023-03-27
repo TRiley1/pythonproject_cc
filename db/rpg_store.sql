@@ -51,6 +51,9 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('Scyche', 'Death''s 
 
 
 INSERT INTO adventurers (name) VALUES ('Store');
+INSERT INTO adventurers (name) VALUES ('Thornforg');
+INSERT INTO adventurers (name) VALUES ('Odinthin');
+INSERT INTO adventurers (name) VALUES ('Alexandra');
 
 INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,8);
 INSERT INTO item_adv(adventurer_id, loot_id) VALUES (1,9);

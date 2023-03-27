@@ -33,7 +33,7 @@ def select_all_stock():
 
 def select_store_stock(id):
     items = []
-    sql = 'SELECT items.* FROM items INNER JOIN item_adv ON item_adv.loot_id = items.id WHERE item_adv.adventurer_id = 1'
+    sql = 'SELECT items.* FROM items INNER JOIN item_adv ON item_adv.loot_id = items.id WHERE item_adv.adventurer_id = %s'
     values = [id]
     results = run_sql(sql,values)
 

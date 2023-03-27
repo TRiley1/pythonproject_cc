@@ -18,6 +18,8 @@ def update(inventory):
     values = [inventory.adventurer.id, inventory.item.id, inventory.id]
     run_sql(sql, values)
 
+
+
 def delete(inventory):
     sql = "DELETE FROM item_adv WHERE id = %s"
     values = [inventory.id]

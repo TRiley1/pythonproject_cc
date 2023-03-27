@@ -24,12 +24,12 @@ def delete(id):
 
 def select_all():
     adventurers = []
-    sql = 'SELECT * FROM adventurers'
+    sql = 'SELECT * FROM adventurers WHERE id != 1'
     results = run_sql(sql)
 
     for row in results:
-        new_item = Item(row['name'])
-        adventurers.append(new_item)
+        new_adventurer = Adventurer(row['name'],row['id'])
+        adventurers.append(new_adventurer)
 
     return adventurers
 
@@ -40,7 +40,7 @@ def select(id):
 
     if results:
         result = results[0]
-        item = Item(result['name'])
+        item = Adventurer(result['name'])
 
     return item
 
