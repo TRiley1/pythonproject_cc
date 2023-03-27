@@ -31,16 +31,7 @@ def select_all_stock():
 
     return items
 
-def select_store_stock(id):
-    items = []
-    sql = 'SELECT items.* FROM items INNER JOIN inventory ON inventory.item_id = items.id WHERE inventory.adventurer_id = %s'
-    values = [id]
-    results = run_sql(sql,values)
 
-    for row in results:
-        new_item = Item(row['type'], row['name'], row['rarity'], row['value'], row['image'],row['id'])
-        items.append(new_item)
-    return items
 
 
 def select(id):
