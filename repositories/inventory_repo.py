@@ -25,6 +25,20 @@ def delete(inventory):
     values = [inventory.id]
     run_sql(sql, values)
 
+def select_all():
+    inventories = []
+    sql = "SELECT * FROM inventory"
+    results = run_sql(sql)
+
+    for inventory in results:
+        adventurer = adventurer_repo.select(inventory["adventurer_id"])
+        item = item_repo.select(inventory["item_id"])
+        inventory = Inventory(adventurer, item, inventory['id'])
+        inventories.append(inventory)
+
+
+    return inventories
+
 def select_adventurer_inventory(user_id):
     items = []
     sql = 'SELECT items.* FROM items INNER JOIN inventory ON inventory.item_id = items.id WHERE inventory.adventurer_id = %s'

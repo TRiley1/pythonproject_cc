@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for inventory in inventory_list %}
+    <h2>{{inventory.adventurer.name}} bought {{inventory.item.name}} for {{inventory.item.value}}</h2>
+{% endfor %}
+
+{% endblock content %}

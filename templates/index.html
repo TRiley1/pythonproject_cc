@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1>Adventurers: </h1>
 {% for adventurer in adventurers %}
-<h1>{{adventurer.name}}</h1>
+<h2>{{adventurer.name}}</h2>
 <form action="/items/{{ adventurer.id }}">
     <input type="submit" value="Store" />
 </form>
@@ -11,4 +12,10 @@
 </form>
     
 {% endfor %}
+
+<h2>Store</h2>
+<form action="/inventory">
+    <input type="submit" value="Records" />
+</form>
+
 {% endblock content %}

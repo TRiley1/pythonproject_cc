@@ -2,6 +2,7 @@
 
 {% block content %}
 {% for item in inventory %}
+    <h2> bought {{item.name}} for {{item.value}} </h2>
         <div class = "item_container">
             <div class = "item_card">
             {% if item.rarity == "ultra" %}

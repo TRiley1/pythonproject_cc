@@ -13,7 +13,7 @@ item_blueprint = Blueprint("item", __name__)
 def items(user_id):
     items = item_repo.select_all()
     advs = adventurer_repo.select(user_id)
-    return render_template("/items/index.html", items = items, adventurers = advs, id = user_id)
+    return render_template("/items/index.html", items = items, adventurer = advs, id = user_id)
 
 @item_blueprint.route("/items/<weapon_id>/update", methods = ['POST'])
 def sell(weapon_id):
