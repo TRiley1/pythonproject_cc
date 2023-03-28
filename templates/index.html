@@ -10,6 +10,20 @@
 <form action="/inventory/{{ adventurer.id }}">
     <input type="submit" value="Inventory" />
 </form>
+<form action="/adventurer/{{ adventurer.id }}/delete" method="POST">
+    <input type="submit" value="Delete">
+</form>
+<!-- <form action="/adventurer/{{ adventurer.id }}/update">
+    <input type="submit" value="Update" />
+</form> -->
+
+<form action="/adventurer/{{ adventurer.id }}/update" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ adventurer.id }}">
+        <input type="submit">
+    </div>
+</form>
     
 {% endfor %}
 
