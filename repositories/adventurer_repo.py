@@ -6,7 +6,7 @@ from models.item import Item
 import repositories.item_repo as item_repo
 
 def save(adventurer):
-    sql = "INSERT INTO adventurers (name) VALUES (%s) RETURNING *"
+    sql = "INSERT INTO adventurers (name,wallet) VALUES (%s,%s) RETURNING *"
     values = [adventurer.name]
     results = run_sql(sql, values)
 
@@ -28,7 +28,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        new_adventurer = Adventurer(row['name'],row['id'])
+        new_adventurer = Adventurer(row['name'],row['wallet'],row['id'])
         adventurers.append(new_adventurer)
 
     return adventurers
@@ -41,13 +41,13 @@ def select(id):
 
     if results:
         result = results[0]
-        adventurer = Adventurer(result['name'],result['id'])
+        adventurer = Adventurer(result['name'],result['wallet'],result['id'])
 
     return adventurer
 
 def adventurer_update(adventurer):
     sql = "UPDATE adventurers \
-        SET name = %s \
+        SET (name, wallet) = (%s, %s) \
         WHERE id = %s"
-    values = [adventurer.name, adventurer.id]
+    values = [adventurer.name, adventurer.wallet, adventurer.id]
     run_sql(sql,values)

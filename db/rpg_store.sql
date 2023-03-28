@@ -13,7 +13,8 @@ CREATE TABLE items (
 
 CREATE TABLE adventurers (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    wallet INT
 );
 
 CREATE TABLE inventory (
@@ -40,8 +41,8 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('Scyche', 'Death''s 
 
 
 
-INSERT INTO adventurers (name) VALUES ('Thornforg');
-INSERT INTO adventurers (name) VALUES ('Odinthin');
-INSERT INTO adventurers (name) VALUES ('Alexandra');
+INSERT INTO adventurers (name, wallet) VALUES ('Thornforg', 10000);
+INSERT INTO adventurers (name, wallet) VALUES ('Odinthin', 20000);
+INSERT INTO adventurers (name, wallet) VALUES ('Alexandra', 40000);
 
 
