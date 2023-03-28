@@ -17,12 +17,8 @@
     <input type="submit" value="Update" />
 </form> -->
 
-<form action="/adventurer/{{ adventurer.id }}/update" method="POST">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ adventurer.id }}">
-        <input type="submit">
-    </div>
+<form action="/adventurer/{{ adventurer.id }}/edit" >
+    <input type="submit" value="Edit" />
 </form>
     
 {% endfor %}
@@ -31,5 +27,9 @@
 <form action="/inventory">
     <input type="submit" value="Records" />
 </form>
+<form action="/adventurer/new" >
+    <input type="submit" value="Add Adventurer" />
+</form>
+
 
 {% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Edit the name of {{adventurer.name}} to:</h1>
+
+<form action="/adventurer/{{user_id}}/edit" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit">
+    </div>
+    </form>
+
+
+{% endblock  %}
