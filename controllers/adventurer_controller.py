@@ -1,5 +1,6 @@
 from flask import Blueprint, Flask, redirect, render_template, request
 from models.adventurer import Adventurer
+import pdb
 import repositories.adventurer_repo as adventurer_repo
 
 adventurer_blueprint = Blueprint("adventurer", __name__)
@@ -11,7 +12,8 @@ def adventurer():
 @adventurer_blueprint.route('/adventurer/new', methods = ['POST'])
 def new_adventurer():
     name = request.form['name']
-    adventurer = Adventurer(name)
+    wallet = request.form['wallet']
+    adventurer = Adventurer(name,wallet)
     adventurer_repo.save(adventurer)
     return redirect('/')
 
@@ -29,6 +31,7 @@ def delete_adventurer(user_id):
 @adventurer_blueprint.route('/adventurer/<user_id>/edit', methods = ['POST'])
 def update_adventurer(user_id):
     name = request.form['name']
-    adventurer = Adventurer(name,user_id)
+    wallet = request.form['wallet']
+    adventurer = Adventurer(name,wallet,user_id)
     adventurer_repo.adventurer_update(adventurer)
     return redirect('/')

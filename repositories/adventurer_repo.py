@@ -7,7 +7,7 @@ import repositories.item_repo as item_repo
 
 def save(adventurer):
     sql = "INSERT INTO adventurers (name,wallet) VALUES (%s,%s) RETURNING *"
-    values = [adventurer.name]
+    values = [adventurer.name, adventurer.wallet]
     results = run_sql(sql, values)
 
     id = results[0]['id']
