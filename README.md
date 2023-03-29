@@ -2,7 +2,7 @@ Brief for Design Project.
 
 Replicating an RPG shop. 
 
-The task is to replicate an RPG store where an Adventurer buy misc equipment for there journey. 
+The task is to replicate an RPG store where an Adventurer buy misc equipment for their journey. 
 
 MVP: 
 
