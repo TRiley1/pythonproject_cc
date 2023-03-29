@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>How many coins would you like to deposit?</h1>
+    <form action="/adventurer/{{user_id}}/deposit" methods="POST">
+        <div>
+            <label for="name">Deposit:</label>
+            <input type="text" id="wallet" name="wallet">
+            <input type="submit">
+        </div>
+        </form>
+{% endblock content %}

@@ -35,3 +35,7 @@ def update_adventurer(user_id):
     adventurer = Adventurer(name,wallet,user_id)
     adventurer_repo.adventurer_update(adventurer)
     return redirect('/')
+
+@adventurer_blueprint.route('/adventurer/<user_id>/deposit')
+def deposit_adventurer(user_id):
+    return render_template('adventurers/deposit.html')
