@@ -43,6 +43,6 @@ INSERT INTO items (type, name, rarity,image, value) VALUES ('Scyche', 'Death''s 
 
 INSERT INTO adventurers (name, wallet) VALUES ('Thornforg', 10000);
 INSERT INTO adventurers (name, wallet) VALUES ('Odinthin', 20000);
-INSERT INTO adventurers (name, wallet) VALUES ('Alexandra', 40000);
+INSERT INTO adventurers (name, wallet) VALUES ('Cat Ballou', 40000);
 
 
