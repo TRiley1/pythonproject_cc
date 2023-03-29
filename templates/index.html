@@ -1,35 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Adventurers: </h1>
-{% for adventurer in adventurers %}
-<h2>{{adventurer.name}}</h2>
-<form action="/items/{{ adventurer.id }}">
-    <input type="submit" value="Store" />
-</form>
-<form action="/inventory/{{ adventurer.id }}">
-    <input type="submit" value="Inventory" />
-</form>
-<form action="/adventurer/{{ adventurer.id }}/delete" method="POST">
-    <input type="submit" value="Delete">
-</form>
-<!-- <form action="/adventurer/{{ adventurer.id }}/update">
-    <input type="submit" value="Update" />
-</form> -->
+<div class = "home_container">
+    <h1>Adventurer Log: </h1>
+    {% for adventurer in adventurers %}
+    <div class = "user_container">
+        <h2>{{adventurer.name}}</h2>
+        <div>
+            <form action="/items/{{ adventurer.id }}">
+                <input type="submit" value="Store" />
+            </form>
 
-<form action="/adventurer/{{ adventurer.id }}/edit" >
-    <input type="submit" value="Edit" />
-</form>
-    
-{% endfor %}
+            <form action="/adventurer/{{ adventurer.id }}/delete" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+            <!-- <form action="/adventurer/{{ adventurer.id }}/update">
+                <input type="submit" value="Update" />
+            </form> -->
 
-<h2>Store</h2>
-<form action="/inventory">
-    <input type="submit" value="Records" />
-</form>
-<form action="/adventurer/new" >
-    <input type="submit" value="Add Adventurer" />
-</form>
+            <form action="/adventurer/{{ adventurer.id }}/edit" >
+                <input type="submit" value="Edit" />
+            </form>
+        </div>    
+    </div>  
+    {% endfor %}
 
+    <h2>Store</h2>
+    <form action="/inventory">
+        <input class="bigger_input" type="submit" value="Records" />
+    </form>
+    <form action="/adventurer/new" >
+        <input class="bigger_input" type="submit" value="Add Adventurer" />
+    </form>
+</div>
 
 {% endblock content %}

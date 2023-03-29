@@ -2,12 +2,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class = "balance_card">
-    <h2>Balance: {{adventurer.wallet}} coins</h2>
-    <form action= '/adventurer/{{ id }}/deposit' >
-        <input type="submit" value="Deposit" />
-    </form>
-    </div>
+        <div class = "balance_card_container">
+        <div class = "balance_card">
+        <div class = "greetings">
+        <h2>Hello! {{adventurer.name}},</h2>
+        <h2>Balance: {{adventurer.wallet}} coins</h2>
+        </div>
+        <div>
+            <form action= '/adventurer/{{ id }}/deposit' >
+                <input class = "balance_button" type="submit" value="Deposit" />
+            </form>
+
+            <form action= '/inventory/{{ id }}' >
+                <input class = "balance_button" type="submit" value="Inventory" />
+            </form>
+        </div>
+        </div>
+        </div>
        
      {% for item in items %}
         <div class = "item_container">
