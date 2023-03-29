@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-{% for inventory in inventory_list %}
+<h1>Transaction History:</h1>
+<div class = inventory_box>
+    {% for inventory in inventory_list %}
+    
     <h2>{{inventory.adventurer.name}} bought {{inventory.item.name}} for {{inventory.item.value}}</h2>
-{% endfor %}
+    
+    {% endfor %}
+</div>
 
 {% endblock content %}
