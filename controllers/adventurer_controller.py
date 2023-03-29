@@ -38,4 +38,12 @@ def update_adventurer(user_id):
 
 @adventurer_blueprint.route('/adventurer/<user_id>/deposit')
 def deposit_adventurer(user_id):
-    return render_template('adventurers/deposit.html')
+    return render_template('adventurers/deposit.html', user_id = user_id)
+
+@adventurer_blueprint.route('/adventurer/<user_id>/deposit', methods = ['POST'])
+def update_balance_adventurer(user_id):
+    adventurer1 = adventurer_repo.select(user_id)
+    balance = adventurer1.wallet + int(request.form['balance'])
+    adventurer = Adventurer(adventurer1.name, balance, user_id)
+    adventurer_repo.adventurer_update(adventurer)
+    return redirect("/items/" + str(adventurer.id))
