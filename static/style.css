@@ -9,6 +9,15 @@
     align-items: center;
 }
 
+.no_funds{
+    display: flex;
+    background-color: blanchedalmond;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
 .inventory_list_container {
     background-color: blanchedalmond;
     padding: 20px;

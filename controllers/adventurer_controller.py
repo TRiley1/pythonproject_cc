@@ -31,8 +31,9 @@ def delete_adventurer(user_id):
 @adventurer_blueprint.route('/adventurer/<user_id>/edit', methods = ['POST'])
 def update_adventurer(user_id):
     name = request.form['name']
-    wallet = request.form['wallet']
-    adventurer = Adventurer(name,wallet,user_id)
+    adventurer1 = adventurer_repo.select(user_id)
+    # wallet = request.form['wallet']
+    adventurer = Adventurer(name,adventurer1.wallet,user_id)
     adventurer_repo.adventurer_update(adventurer)
     return redirect('/')
 
