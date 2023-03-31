@@ -1,9 +1,15 @@
-<mxfile host="app.diagrams.net" modified="2023-03-31T14:43:50.104Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" version="21.1.2" etag="5-h-ie1Ar1JwrRegmUDO" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-31T14:54:31.805Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="DMFM4hRvn-zH8F5B-Nny" version="21.1.2" type="github">
   <diagram name="Page-1" id="W9TobjGSuhYqeut1QJhy">
-    <mxGraphModel>
+    <mxGraphModel dx="2716" dy="1764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="rMwIq4bPa37DMMGjgexP-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-110" y="-80" width="400" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="rMwIq4bPa37DMMGjgexP-3" value="&lt;h1&gt;Pseudo Code: Item Purchase&lt;/h1&gt;&lt;p&gt;Write function sell(weapon_id)&lt;/p&gt;&lt;p&gt;select() buying_adventurer using adventurer_id from form&lt;/p&gt;&lt;p&gt;select() selling_item using weapon_id&lt;/p&gt;&lt;p&gt;if buying_adventurer.wallet &amp;gt;= selling_item.value&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;make&amp;nbsp;new Inventory (buying_adventurer, selling_item)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;decrease buying_adventurer wallet&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;save new inventory to database&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;update buying_adventurer on database&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;redirect shop/ buying_adventurer.id&lt;br&gt;&lt;/p&gt;&lt;p&gt;else&lt;/p&gt;&lt;p&gt;redirect to route no sale.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="-50" width="410" height="340" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
